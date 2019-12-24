@@ -1,23 +1,36 @@
-/* Some dummy starter css which should get some prefixes
-/  when autoprefixer is run */
-
-.testing {
-  width: percentage(1/7);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body {
-  background-color: #232830;
-  color: white;
 
+html {
+  font: normal 16px sans-serif;
+  color: #555;
+}
+
+.header {
   display: flex;
-  justify-content: center;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 100px 0;
 
-  @keyframes slidein {
-    from {
-      transform: translateX(0%);
+
+  &__nav {
+    list-style: none;
+
+    li>a {
+      text-decoration: none;
+      opacity: 0.75;
     }
-
-    to {
-      transform: translateX(100%);
+    li>a:hover {
+      text-decoration: none;
+      opacity: 1;
     }
   }
+
+
+
+
+
+}
