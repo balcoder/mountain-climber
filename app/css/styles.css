@@ -5,18 +5,15 @@
 
 html {
   font: normal 16px sans-serif;
-  color: #555; }
+  color: #fff; }
 
 a {
   text-decoration: none;
-  opacity: 0.75; }
-
-a:hover {
-  text-decoration: none;
-  opacity: 1; }
+  color: #fff;
+  opacity: 0.55;
+  cursor: pointer; }
 
 .btn {
-  border-radius: 15px;
   padding: 20px 45px;
   text-transform: uppercase;
   font-weight: bold;
@@ -44,12 +41,22 @@ section {
     list-style: none; }
     .header__nav li {
       margin: 0 15px; }
+      .header__nav li:hover {
+        background-color: #3f51b5; }
+      .header__nav li a:hover {
+        opacity: .5;
+        cursor: pointer;
+        background-color: #3f51b5; }
 
 .hero {
   position: relative;
   justify-content: center;
   text-align: center;
   min-height: 100vh; }
+  .hero__content {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards; }
   .hero__image {
     position: absolute;
     top: 0;
@@ -77,3 +84,8 @@ section {
     opacity: .75; }
   100% {
     opacity: 1; } }
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin-top: 0; } }
