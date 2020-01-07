@@ -6,7 +6,7 @@
 
 html {
   font: normal 16px sans-serif;
-  color: #fff;
+
 }
 
 a {
@@ -42,7 +42,27 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 100px 80px;
+
+  & h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+
+  & p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 }
+
+section:not(.hero):nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
 
 
 .header {
@@ -54,6 +74,7 @@ section {
   padding: 35px 85px 0 100px;
   animation: 1.2s fadein 0.5s forwards;
   opacity: 0;
+  color: #fff;
 
   &__nav {
     display: flex;
@@ -78,6 +99,7 @@ section {
   justify-content: center;
   text-align: center;
   min-height: 100vh;
+  color: #fff;
 
   &__content {
     opacity: 0;
@@ -105,6 +127,66 @@ section {
     font: nomral 28px "Open Sans", sans-serif;
     margin-bottom: 40px;
   }
+}
+
+.destination {
+
+  &__grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & li {
+      height: 350px;
+      padding: 20px;
+      background-clip: content-box;
+      background-size: cover;
+      background-position: center;
+      list-style: none;
+    }
+
+    & li.small {
+      flex: 30%;
+    }
+
+    & li.large {
+      flex: 70%;
+    }
+  }
+}
+
+hr {
+  width: 250px;
+  height: 3px;
+  background-color: #3f51b5;
+  border: 0;
+  margin-bottom: 50px;
+}
+
+.package {
+  &__grid {
+    flex-basis: 50%;
+  }
+  &__grid li {
+    list-style: none;
+    padding: 50px;
+
+    text-align: center;
+
+
+    & i {
+      color: #8c9eff;
+      padding: 20px;
+    }
+
+    & h4 {
+      font-size: 30px;
+      margin: 25px 0;
+    }
+  }
+
+
 }
 
 @keyframes fadein {
