@@ -185,8 +185,31 @@ hr {
       margin: 25px 0;
     }
   }
+}
+
+.packages {
+  display: flex;
+  flex-flow: row wrap;
+  &__grid {
+    flex-basis: 50%;
+  }
+  &__grid li {
+    list-style: none;
+    padding: 50px;
+
+    text-align: center;
 
 
+    & i {
+      color: #8c9eff;
+      padding: 20px;
+    }
+
+    & h4 {
+      font-size: 30px;
+      margin: 25px 0;
+    }
+  }
 }
 
 @keyframes fadein {
@@ -212,4 +235,29 @@ hr {
     opacity: 1;
     margin-top: 0;
   }
+}
+
+.package2 {
+
+  height: 700px;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+  &__grid {
+    background-color: pink;
+    //width: 250px;
+    margin: 10px 0;
+    padding: 10px;
+
+    flex-basis: 45%;
+
+    & li {
+      list-style: none;
+    }
+  }
+
 }
